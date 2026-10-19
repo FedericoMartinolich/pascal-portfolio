@@ -14,6 +14,23 @@ Free Pascal 3.2.2 para Windows (32 bits):
 2. Descomprimí `ejecutables-win32.zip`
 3. Doble click en cualquier `.exe` — se abren en una consola de Windows
 
+## 🛠️ Instalar Free Pascal (paso a paso)
+
+Para compilar desde el código fuente necesitás **Free Pascal 3.2.2**. El instalador está
+subido a este repo como **[Release `fpc-3.2.2-win32`](https://github.com/FedericoMartinolich/pascal-portfolio/releases/tag/fpc-3.2.2-win32)**
+(51 MB, `fpc-3.2.2.i386-win32.exe`, SHA-256 `7EC78B17…4B5AC8`):
+
+1. **Descargá** el `.exe` desde el [Release](https://github.com/FedericoMartinolich/pascal-portfolio/releases/tag/fpc-3.2.2-win32)
+   (o desde el [sitio oficial](https://www.freepascal.org/download.html))
+2. **Ejecutalo**: Siguiente → aceptá los valores por defecto → Instalar → Finalizar
+3. **Verificá** en una terminal (CMD o PowerShell): `fpc -iV` debe responder `3.2.2`
+4. **Compilá** cualquier ejercicio:
+   ```bash
+   cd pascal-portfolio/ejercicios
+   fpc ejer165.pas     # genera ejer165.exe
+   ```
+5. **Ejecutá**: `ejer165.exe` (o doble click en el explorador)
+
 ## ⭐ Destacados
 
 | Programa | Qué hace | Por qué destaca |
@@ -50,14 +67,3 @@ README.md               este archivo
 - Son programas de consola de un curso: usan `crt`, datos de entrada a veces hardcodeados
   y no siempre validan la entrada. Los destacados son los que tienen estructura modular
   y resuelven un problema concreto.
-
-## 🔧 Compilar desde el código fuente
-
-Requiere **Free Pascal 3.2.2** (la versión con la que están desarrollados y probados).
-Descargas oficiales: <https://www.freepascal.org/download.html>
-
-```bash
-git clone https://github.com/FedericoMartinolich/pascal-portfolio.git
-cd pascal-portfolio/ejercicios
-fpc ejer165.pas     # genera ejer165.exe
-```
