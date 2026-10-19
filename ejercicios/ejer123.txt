@@ -1,0 +1,53 @@
+program ejer;
+uses crt;
+
+var
+   mat:array[1..2,1..2]of integer;
+   vec:array[1..4]of integer;
+   i,j,f,c,n,aux:integer;
+
+Begin
+   clrscr;
+   for i:=1 to 4 do
+   begin
+      write('-> ');readln(vec[i]);
+   end;
+
+   for i:=1 to (4-1) do
+   begin
+      for j:=(i+1) to 4 do
+      begin
+      if vec[i]<vec[j] then
+         begin
+            aux:=vec[i];
+            vec[i]:=vec[j];
+            vec[j]:=aux;
+         end;
+      end;
+   end;
+
+   i:=1;
+   for f:=1 to 2 do
+   begin
+      for c:=1 to 2 do
+      begin
+         mat[f,c]:=vec[i];
+         i:=i+1;
+      end;
+   end;
+
+
+   for f:=1 to 2 do
+   begin
+      for c:=1 to 2 do
+      begin
+         write;
+         write(' ',mat[f,c]);
+      end;
+      writeln;
+   end;
+
+
+
+   readkey;
+End.
