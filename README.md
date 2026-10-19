@@ -1,9 +1,18 @@
 # Pascal Portfolio — Ejercicios y proyectos en Free Pascal
 
-Colección completa de **128 programas escritos en Free Pascal (FPC 3.2.2)**, desde los
-fundamentos del lenguaje hasta mini-aplicaciones con `record`, procedimientos, matrices y
-algoritmos de ordenamiento. Incluye la selección de piezas destacadas pensada para
-portafolio.
+Colección completa de **128 programas escritos en Free Pascal 3.2.2** (FPC, Windows),
+desde los fundamentos del lenguaje hasta mini-aplicaciones con `record`, procedimientos,
+matrices y algoritmos de ordenamiento. Incluye la selección de piezas destacadas pensada
+para portafolio y los **ejecutables listos para correr**.
+
+## ▶ Ejecutar sin compilar
+
+`ejecutables-win32.zip` contiene los **122 programas que compilan**, compilados con
+Free Pascal 3.2.2 para Windows (32 bits):
+
+1. Cloná el repo: `git clone https://github.com/FedericoMartinolich/pascal-portfolio.git`
+2. Descomprimí `ejecutables-win32.zip`
+3. Doble click en cualquier `.exe` — se abren en una consola de Windows
 
 ## ⭐ Destacados
 
@@ -25,26 +34,30 @@ portafolio.
 ## 📁 Estructura
 
 ```
-ejercicios/   128 archivos .pas — el conjunto completo, tal como se escribieron
-README.md     este archivo
+ejercicios/             128 archivos .pas — el conjunto completo, tal como se escribieron
+ejecutables-win32.zip   los 122 programas compilados y listos para ejecutar en Windows
+README.md               este archivo
 ```
 
 ## 🧩 Notas honestas
 
+- **122 de 128 programas compilan** con Free Pascal 3.2.2 (verificado compilándolos todos).
+- **No compilan (5 borradores de aprendizaje)**: `ejer103` (error de sintaxis), `ejer20`
+  (archivo vacío), `ejerplus9`, `ejerplus12` y `New Procedure` (refactors abandonados
+  a medias). `ejer82` compila pero quedó inconcluso.
 - **Duplicados exactos**: `ejer47.pas` ≡ `ejer41.pas`, `ejer79.pas` ≡ `ejer78.pas`,
   `ejer101.pas` ≡ `Ejemplo Vectores.pas`. Se conservan por fidelidad al original.
-- **Sin compilar / incompletos**: `ejer103`, `ejerplus9`, `ejerplus12`, `New Procedure`
-  (errores de sintaxis), `ejer20` (vacío) y `ejer82` (abandonado). Son borradores de
-  aprendizaje y quedan incluidos como registro del proceso.
 - Son programas de consola de un curso: usan `crt`, datos de entrada a veces hardcodeados
   y no siempre validan la entrada. Los destacados son los que tienen estructura modular
   y resuelven un problema concreto.
 
-## 🔧 Compilar
+## 🔧 Compilar desde el código fuente
 
-Con [Free Pascal](https://www.freepascal.org/):
+Requiere **Free Pascal 3.2.2** (la versión con la que están desarrollados y probados).
+Descargas oficiales: <https://www.freepascal.org/download.html>
 
 ```bash
-cd ejercicios
+git clone https://github.com/FedericoMartinolich/pascal-portfolio.git
+cd pascal-portfolio/ejercicios
 fpc ejer165.pas     # genera ejer165.exe
 ```

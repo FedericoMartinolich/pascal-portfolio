@@ -1,0 +1,7 @@
+_units_tmp/
+ejecutables/
+*.o
+*.ppu
+*.exe
+*.bak
+*.rsj
